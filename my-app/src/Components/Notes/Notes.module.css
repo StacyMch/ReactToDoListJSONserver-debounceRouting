@@ -1,0 +1,89 @@
+input {
+	padding: 6px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-weight: bold;
+	text-overflow: ellipsis;
+	cursor: pointer;
+}
+
+.completed {
+	color: #767676 !important;
+	background-color: #f3f3f3;
+	text-decoration: line-through;
+	font-weight: normal;
+}
+
+.note {
+	position: relative;
+	background-color: #ccc;
+	width: 100%;
+	border-radius: 4px;
+	display: flex;
+	gap: 4px;
+	width: fit-content;
+	padding: 5px;
+	width: 100%;
+}
+
+.note:hover .absoluteIcon {
+	display: block;
+}
+
+.colored {
+	background-color: #ffe49d;
+}
+
+.iconsContainer {
+	display: flex;
+	align-items: center;
+	gap: 2px;
+	height: fit-content;
+}
+
+.iconContainer {
+	background-color: #ffffff;
+	border-radius: 4px;
+	padding: 4px;
+}
+
+.absoluteIcon {
+	display: none;
+	position: absolute;
+	top: 6px;
+	right: 60px;
+	background-color: #ffffffe3;
+}
+
+.editBtn {
+	background: transparent;
+	border: none;
+	color: #9d3600;
+	cursor: pointer;
+	font-size: 16px;
+	transition: all 0.3s;
+}
+
+.saveBtn {
+	background: transparent;
+	border: none;
+	color: #28a745;
+	cursor: pointer;
+	font-size: 16px;
+	transition: all 0.3s;
+}
+
+.deleteBtn {
+	background: transparent;
+	border: none;
+	color: #dc3545;
+	cursor: pointer;
+	font-size: 16px;
+	transition: all 0.3s;
+}
+
+.deleteBtn:hover,
+.saveBtn:hover,
+.editBtn:hover {
+	font-weight: bold;
+}

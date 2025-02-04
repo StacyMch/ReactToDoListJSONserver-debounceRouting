@@ -1,0 +1,50 @@
+input {
+	width: 100%;
+}
+
+input::placeholder {
+	font-weight: normal;
+}
+
+.addContainer {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.iconsContainer {
+	display: flex;
+	align-items: center;
+	gap: 2px;
+	height: fit-content;
+}
+
+.iconContainer {
+	background-color: #ffffff;
+	border-radius: 4px;
+	padding: 4px;
+}
+
+.saveBtn {
+	background: transparent;
+	border: none;
+	color: #28a745;
+	cursor: pointer;
+	font-size: 16px;
+	transition: all 0.3s;
+}
+
+.deleteBtn {
+	background: transparent;
+	border: none;
+	color: #dc3545;
+	cursor: pointer;
+	font-size: 16px;
+	transition: all 0.3s;
+}
+
+.deleteBtn:hover,
+.saveBtn:hover,
+.editBtn:hover {
+	font-weight: bold;
+}
