@@ -9,7 +9,6 @@ export const useRequestGet = (refreshContentFlag) => {
 		setIsLoading(true);
 		readNotes()
 			.then((loadedNotes) => {
-				console.log('Loaded notes:', loadedNotes);
 				setNotes(loadedNotes);
 			})
 			.catch((error) => {

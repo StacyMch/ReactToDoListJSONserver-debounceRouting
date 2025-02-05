@@ -25,7 +25,6 @@ export const useRequestGetNote = (id, refreshContentFlag) => {
 			.then((loadedNote) => {
 				isNoteLoaded = true;
 
-				console.log('Loaded note:', loadedNote);
 				if (!timeoutFlag) {
 					if (!loadedNote) {
 						navigate('/task-does-not-exist');

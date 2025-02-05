@@ -20,7 +20,6 @@ export const MainPage = () => {
 	};
 
 	const { isLoading, notes } = useRequestGet(refreshContentFlag);
-	console.log(notes);
 
 	const toggleAlphabetSorting = () => {
 		setChecked(!checked);
