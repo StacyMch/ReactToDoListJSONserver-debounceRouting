@@ -3,7 +3,6 @@ import { updateNote } from '../api';
 
 export const useRequestIsCompleted = (refreshContent) => {
 	const [isChanging, setIsChanging] = useState(false);
-	// const [done, setDone] = useState(false);
 
 	const requestIsCompleted = (id) => {
 		let updatedNote = '';
@@ -18,7 +17,6 @@ export const useRequestIsCompleted = (refreshContent) => {
 			.then((response) => {
 				console.log('Статус заметки обновлен, ответ сервера: ', response);
 				refreshContent();
-				// setDone(true);
 			})
 			.catch((error) => {
 				console.error('Ошибка при отправке запроса:', error);
@@ -31,6 +29,5 @@ export const useRequestIsCompleted = (refreshContent) => {
 	return {
 		isChanging,
 		requestIsCompleted,
-		// done,
 	};
 };

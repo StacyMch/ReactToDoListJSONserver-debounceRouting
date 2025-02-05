@@ -1,15 +1,14 @@
 import { useEffect, useState, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import styles from './Note.module.css';
-import { BtnBack } from '../button/BtnBack';
-import { Loader } from '../../utils/Loader';
+import { BtnBack } from '../../button/BtnBack';
+import { Loader } from '../../Loader/Loader';
 import {
 	useRequestGetNote,
 	useRequestUpdateText,
 	useRequestDelete,
 	useRequestIsCompleted,
-} from '../../hooks';
-// import { NoteNotFound } from '../Pages/NotFound/NoteNotFound';
+} from '../../../hooks';
 
 const Note = () => {
 	const [idEdited, setIdEdited] = useState(null);
@@ -57,28 +56,9 @@ const Note = () => {
 	}, [idEdited]);
 
 	const params = useParams();
-	console.log(params);
 	const id = params.id;
-	console.log(useRequestGetNote(id, refreshContentFlag));
-
-	// const { isLoading, notes } = useRequestGet(refreshContentFlag);
-	// console.log(isLoading, notes);
 
 	const { isLoading, note } = useRequestGetNote(id, refreshContentFlag);
-	console.log(note);
-
-	// if (!note) {
-	// 	return null;
-	// }
-
-	// const { content, completed } = note;
-
-	// const { note } = useRequestGetNote(id);
-	// console.log(note);
-
-	// const { notes } = useRequestGet(false);
-	// console.log(notes);
-	// const { content, completed } = notes.find((note) => note.id === id);
 
 	let content;
 	let completed;
@@ -89,8 +69,6 @@ const Note = () => {
 		content = '';
 		completed = false;
 	}
-
-	console.log(content, completed);
 
 	return isLoading ? (
 		<Loader />
@@ -104,7 +82,6 @@ const Note = () => {
 						onChange={handleInputChange}
 						onBlur={idEdited === id ? () => requestUpdate(id) : null}
 						ref={idEdited === id ? refForCursor : refForResizing}
-						// disabled={completed || idEdited !== id}
 					></textarea>
 				) : isUpdating ? (
 					<Loader />
@@ -121,17 +98,6 @@ const Note = () => {
 					</div>
 				)}
 
-				{/* {idEdited !== id && !completed && (
-					<div className={styles.iconContainer + ' ' + styles.absoluteIcon}>
-						<div
-							className={styles.editBtn}
-							disabled={isUpdating}
-							// onClick={() => wantToEdit(id, content)}
-						>
-							&#9998;
-						</div>
-					</div>
-				)} */}
 				<div className={styles.iconsContainer}>
 					{!completed && (
 						<div className={styles.iconContainer}>

@@ -15,21 +15,9 @@ export const fetchRequest = (method, { id, ...data } = {}) => {
 		options.body = JSON.stringify(data);
 	}
 
-	// const fetchProduct = (id) => new Promise((resolve) => {
-	// 	setTimeout(() => {
-	// 	  resolve(database.products[id]);
-	// 	}, 2500);
-	//   });
-
-	// return fetch(url, options)
-	// 	.then((rawResponse) => rawResponse.json())
-	// 	.catch((error) => {
-	// 		console.error('Ошибка при отправке запроса:', error);
-	// 	});
 	return fetch(url, options).then((rawResponse) => {
 		if (!rawResponse.ok) {
 			// Если статус ответа не в диапазоне 200-299, выбрасываем ошибку
-			// throw new Error(`Ошибка: ${rawResponse.status} ${rawResponse.statusText}`);
 			throw new Error(rawResponse.status);
 		}
 		return rawResponse.json();

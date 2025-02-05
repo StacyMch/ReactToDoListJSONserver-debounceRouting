@@ -12,7 +12,6 @@ export const useRequestDelete = () => {
 			.then((response) => {
 				console.log('Заметка удалена');
 				navigate('/');
-				// refreshContent();
 			})
 			.finally(() => {
 				setIsDeleting(false);

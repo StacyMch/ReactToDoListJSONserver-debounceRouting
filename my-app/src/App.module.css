@@ -118,23 +118,6 @@ a {
 	padding: 4px;
 }
 
-/* .absoluteIcon {
-	display: none;
-	position: absolute;
-	top: 5px;
-	right: 55px;
-	background-color: #ffffffe3;
-} */
-
-/* .editBtn {
-	background: transparent;
-	border: none;
-	color: #9d3600;
-	cursor: pointer;
-	font-size: 16px;
-	transition: all 0.3s;
-} */
-
 .saveBtn {
 	background: transparent;
 	border: none;

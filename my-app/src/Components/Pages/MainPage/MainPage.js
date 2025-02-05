@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { NewNoteInput } from '../../NewNoteInput/NewNoteInput';
 import { Notes } from '../../Notes/Notes';
 import styles from '../../../App.module.css';
-import { Loader } from '../../../utils/Loader';
+import { Loader } from '../../Loader/Loader';
 import { useRequestGet, useDebounce } from '../../../hooks';
 
 export const MainPage = () => {

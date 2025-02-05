@@ -1,7 +1,7 @@
 import { Routes, Route, NavLink, Navigate } from 'react-router-dom';
 import styles from './App.module.css';
 import { MainPage } from './Components/Pages/MainPage/MainPage';
-import Note from './Components/Note/Note';
+import Note from './Components/Pages/Note/Note';
 import { Error404, NoteNotFound } from './Components/Pages/ErrorPages/NotFound';
 import { NoteLoadError } from './Components/Pages/ErrorPages/LoadError/NoteLoadError';
 
@@ -24,24 +24,6 @@ export const App = () => {
 							}
 						</NavLink>
 					</li>
-					{/* <li>
-						<NavLink to="/task">
-							{({ isActive }) =>
-								isActive ? (
-									<>
-										<span className={styles.breadcrumbsSymbol}>
-											→
-										</span>
-										<span className={styles.breadcrumb}>
-											Текущая задача
-										</span>
-									</>
-								) : (
-									''
-								)
-							}
-						</NavLink>
-					</li> */}
 				</ul>
 				<Routes>
 					<Route path="/" element={<MainPage />} />

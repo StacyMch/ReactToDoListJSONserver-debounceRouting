@@ -30,7 +30,6 @@ export const Notes = ({ notes, refreshContent, debouncedSearch, sorting }) => {
 				<input
 					className={completed ? styles.completed : null}
 					value={content}
-					// disabled={completed}
 					readOnly
 				></input>
 				<div className={styles.iconsContainer}>
